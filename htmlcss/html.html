@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+        body {
+            background: black;
+            margin: 0;
+            padding: 0;
+        }
+
+        .scene {
+            margin: 80px auto;
+            width: 200px;
+            position: relative;
+            aspect-ratio: 4 / 5;
+            perspective: 1000px;
+        }
+
+        .carrossel {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            animation: rotate 30s infinite linear;
+
+        }
+
+        .carrossel>img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 190px;
+            aspect-ratio: 4 / 5;
+            border-radius: 10px;
+            transform: rotateY(var(--i)) translateZ(288px);
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotateY(360deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="scene">
+        <div class="carrossel">
+            <img src="lane staley.webp" style="--i:000deg">
+            <img src="formação aic.avif" style="--i:040deg">
+            <img src="AIC formação atual.avif" style="--i:080deg">
+            <img src="jar of flies.avif" style="--i:120deg">
+            <img src="dog aic.jpg" style="--i:160deg">
+            <img src="alice_in_chains_dirt.jpg" style="--i:200deg">
+            <img src="facelift.jpg" style="--i:240deg">
+            <img src="AIC_Unplugged.jpg" style="--i:280deg">
+            <img src="alice in chains.png" style="--i:320deg">
+</body>
+
+</html>
